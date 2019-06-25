@@ -1,0 +1,147 @@
+Synaptiv name	generic	statusOther	Alerts	Quality	Feature	Description1	Description2	Position	Location	Value	sourceChannel	Enabled?	sourceUnit	sourceDataType	Priority	mappingType	Mapping
+vehicle_gps_longitude	longitude			vehicle	gps					longitude	wirelesscar	TRUE	degs	float	0		
+vehicle_gps_latitude	latitude			vehicle	gps					latitude	wirelesscar	TRUE	degs	float	0		
+timestamp	timestamp			timestamp							wirelesscar	TRUE		time	0		
+vehicle_speed	speed			vehicle						speed	wirelesscar	TRUE	kph	integer	0		
+vehicle_gps_bearing	heading			vehicle	gps					bearing	wirelesscar	TRUE	degs	integer	0		
+vehicle_vin_id	vin			vehicle	vin					id	wirelesscar	TRUE		string	0		
+vehicle_odometer_distance		ODOMETER_METER		vehicle	odometer					distance	wirelesscar	TRUE	m	integer	1	scale	{"multiplier": 0.001, "decimals": 3}
+vehicle_odometer_distance		ODOMETER		vehicle	odometer					distance	wirelesscar	TRUE	km	integer	0		
+journey_speed_average_speed	averageSpeed			journey	speed	average				speed	wirelesscar	TRUE	kph	float	0		
+engine_fuel_to_empty_distance		DISTANCE_TO_EMPTY_FUEL		engine	fuel	to_empty				distance	wirelesscar	TRUE	km	integer	0		
+journey_fuel_consumption_average_rate	averageFuelConsumption			journey	fuel	consumption	average			rate	wirelesscar	TRUE	L/km	float	0		
+journey_fuel_consumption_average_rate	averagePHEVFuelConsumption			journey	fuel	consumption	average			rate	wirelesscar	TRUE	L/km	float	0		
+engine_fuel_level_percent		FUEL_LEVEL_PERC		engine	fuel	level				percent	wirelesscar	TRUE		integer	0		
+body_brake_fluid_low_active		BRAKE_FLUID_WARN		body	brake	fluid	low			active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"LOW": true}}
+engine_oil_status		EXT_OIL_LEVEL_WARN		engine	oil					status	wirelesscar	TRUE		string	0	stringmap	{"fallback": "unknown", "values": {"VERY LOW": "very_low", "LOW": "low", "NORMAL": "normal", "HIGH": "high"}}
+body_door_unlocked_active		DOOR_IS_ALL_DOORS_LOCKED		body	door	unlocked				active	wirelesscar	TRUE		string	0	stringmap	{"fallback": false, "values": { "FALSE": true}}
+vehicle_moving_status		VEHICLE_STATE_TYPE		vehicle	moving					status	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": "not_moving", "values": {"ENGINE_ON_MOVING": "is_moving", "UNKNOWN": "unknown"}}
+cabin_airbag_status		SRS_STATUS		cabin	airbag					status	wirelesscar	TRUE		string	0	stringmap	{"fallback": "not_deployed", "values": {"NO-SRS-INFO": "unknown", "SRS-DEPLOYED": "deployed"}}
+vehicle_alarm_theft_status		THEFT_ALARM_STATUS		vehicle	alarm	theft				status	wirelesscar	TRUE		string	0	stringmap	{"fallback": "alarm_off", "values": {"NO-ALARM-INFO": "unknown", "ALARM-OFF": "alarm_off", "ALARM-ARMED": "alarm_armed", "ALARM-TRIG": "alarm_triggered", "ALARM-TRIG-MMS": "alarm_triggered", "ALARM-TRIG-IS": "alarm_triggered", "SENSOR-FAULT": "alarm_fault"}}
+vehicle_alarm_panic_triggered_active		IS_PANIC_ALARM_TRIGGERED		vehicle	alarm	panic	triggered			active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"TRUE": true}}
+engine_battery_status		BATTERY_STATUS		engine	battery					status	wirelesscar	TRUE		string	0	stringmap	{"fallback": "unknown", "values": {"BATTERY-EMPTY": "empty", "BATTERY-LOW": "low", "BATTERY-1-4": "25%", "BATTERY-1-2": "50%", "BATTERY-3-4": "75%", "BATTERY-1-1": "100%"}}
+engine_battery_voltage		BATTERY_VOLTAGE		engine	battery					voltage	wirelesscar	TRUE		float	0		
+body_door_open_status		IS_CAB_OPEN		body	door	open				status	wirelesscar	TRUE		string	0	stringmap	{"fallback": "unknown", "values": {"TRUE": "open", "FALSE": "closed"}} 
+body_sunroof_status		IS_SUNROOF_OPEN		body	sunroof					status	wirelesscar	TRUE		string	0	stringmap	{"fallback": "unknown", "values": {"TRUE": "open", "FALSE": "closed"}} 
+engine_coolant_temperature		ENGINE_COOLANT_TEMP		engine	coolant					temperature	wirelesscar	TRUE		integer	0		
+body_headlight_status		IS_HEAD_LIGHTS_ON		body	headlight					status	wirelesscar	TRUE		string	0	stringmap	{"fallback": "unknown", "values": {"TRUE": "on", "FALSE": "off"}} 
+vehicle_distance_to_next_service_distance		EXT_KILOMETERS_TO_SERVICE		vehicle	distance	to_next_service				distance	wirelesscar	TRUE	km	integer	0		
+vehicle_charging_active		EV_IS_CHARGING		vehicle	charging					active	wirelesscar	FALSE		boolean	0		
+vehicle_plugged_in_active		EV_IS_PLUGGED_IN		vehicle	plugged_in					active	wirelesscar	FALSE		boolean	0		
+engine_ev_battery_to_empty_distance		EV_RANGE_ON_BATTERY_KM		engine	ev_battery	to_empty				distance	wirelesscar	TRUE	km	integer	0		
+engine_ev_battery_charge_percent		EV_STATE_OF_CHARGE		engine	ev_battery	charge				percent	wirelesscar	FALSE		float	0		
+vehicle_charged_fully_time		EV_MINUTES_TO_FULLY_CHARGED		vehicle	charged	fully				time	wirelesscar	TRUE	mins	integer	0		
+		EV_CHARGE_TYPE									wirelesscar	FALSE			0		
+timestamp	statusTimestamp			timestamp							wirelesscar	TRUE		integer	0		
+body_wheel_front_left_pressure		TYRE_PRESSURE_FRONT_LEFT		body	wheel			front	left	pressure	wirelesscar	TRUE		kPa	0		
+body_wheel_front_right_pressure		TYRE_PRESSURE_FRONT_RIGHT		body	wheel			front	right	pressure	wirelesscar	TRUE		kPa	0		
+body_wheel_rear_left_pressure		TYRE_PRESSURE_REAR_LEFT		body	wheel			rear	left	pressure	wirelesscar	TRUE		kPa	0		
+body_wheel_rear_right_pressure		TYRE_PRESSURE_REAR_RIGHT		body	wheel			rear	right	pressure	wirelesscar	TRUE		kPa	0		
+body_wheel_pressure_low_front_left_active		TYRE_STATUS_FRONT_LEFT		body	wheel	pressure	low	front	left	active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": true, "values": {"NORMAL": false}}
+body_wheel_pressure_low_front_right_active		TYRE_STATUS_FRONT_RIGHT		body	wheel	pressure	low	front	right	active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": true, "values": {"NORMAL": false}}
+body_wheel_pressure_low_rear_left_active		TYRE_STATUS_REAR_LEFT		body	wheel	pressure	low	rear	left	active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": true, "values": {"NORMAL": false}}
+body_wheel_pressure_low_rear_right_active		TYRE_STATUS_REAR_RIGHT		body	wheel	pressure	low	rear	right	active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": true, "values": {"NORMAL": false}}
+body_window_front_left_status		WINDOW_FRONT_LEFT_STATUS		body	window			front	left	status	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": "unknown", "values": {"OPEN": "open", "CLOSED": "closed"}}
+body_window_front_right_status		WINDOW_FRONT_RIGHT_STATUS		body	window			front	right	status	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": "unknown", "values": {"OPEN": "open", "CLOSED": "closed"}}
+body_window_rear_left_status		WINDOW_REAR_LEFT_STATUS		body	window			rear	left	status	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": "unknown", "values": {"OPEN": "open", "CLOSED": "closed"}}
+body_window_rear_right_status		WINDOW_REAR_RIGHT_STATUS		body	window			rear	right	status	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": "unknown", "values": {"OPEN": "open", "CLOSED": "closed"}}
+body_door_locked_front_left_status		DOOR_FRONT_LEFT_LOCK_STATUS		body	door	locked		front	left	status	wirelesscar	TRUE		string	0	stringmap	{"fallback": "unknown", "values": {"LOCKED": "locked", "UNLOCKED": "unlocked"}}
+body_door_locked_front_right_status		DOOR_FRONT_RIGHT_LOCK_STATUS		body	door	locked		front	right	status	wirelesscar	TRUE		string	0	stringmap	{"fallback": "unknown", "values": {"LOCKED": "locked", "UNLOCKED": "unlocked"}}
+body_door_locked_rear_left_status		DOOR_REAR_LEFT_LOCK_STATUS		body	door	locked		rear	left	status	wirelesscar	TRUE		string	0	stringmap	{"fallback": "unknown", "values": {"LOCKED": "locked", "UNLOCKED": "unlocked"}}
+body_door_locked_rear_right_status		DOOR_REAR_RIGHT_LOCK_STATUS		body	door	locked		rear	right	status	wirelesscar	TRUE		string	0	stringmap	{"fallback": "unknown", "values": {"LOCKED": "locked", "UNLOCKED": "unlocked"}}
+body_door_open_rear_left_active		DOOR_FRONT_LEFT_POSITION		body	door	open		rear	left	active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"OPEN": true}}
+body_door_open_rear_right_active		DOOR_FRONT_RIGHT_POSITION		body	door	open		rear	right	active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"OPEN": true}}
+body_door_open_rear_left_active		DOOR_REAR_LEFT_POSITION		body	door	open		rear	left	active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"OPEN": true}}
+body_door_open_rear_right_active		DOOR_REAR_RIGHT_POSITION		body	door	open		rear	right	active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"OPEN": true}}
+body_boot_locked_status		DOOR_BOOT_LOCK_STATUS		body	boot	locked				status	wirelesscar	TRUE		string	0	stringmap	{"fallback": "unknown", "values": {"LOCKED": "locked", "UNLOCKED": "unlocked"}}
+body_hood_locked_status		DOOR_ENGINE_HOOD_LOCK_STATUS		body	hood	locked				status	wirelesscar	TRUE		string	0	stringmap	{"fallback": "unknown", "values": {"LOCKED": "locked", "UNLOCKED": "unlocked"}}
+body_boot_open_active		DOOR_BOOT_POSITION		body	boot	open				active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"OPEN": true}}
+body_hood_open_active		DOOR_ENGINE_HOOD_POSITION		body	hood	open				active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"OPEN": true}}
+journey_brake_eco_score	brakeEcoScore			journey	brake	eco				score	wirelesscar	TRUE		float	0		
+engine_regenerated_energy	energyRegenerated			engine	regenerated					energy	wirelesscar	TRUE		float	0		
+journey_speed_eco_score	speedEcoScore			journey	speed	eco				score	wirelesscar	TRUE		float	0		
+journey_throttle_eco_score	throttleEcoScore			journey	throttle	eco				score	wirelesscar	TRUE		float	0		
+journey_total_eco_score	totalEcoScore			journey	total	eco				score	wirelesscar	TRUE		float	0		
+cabin_seat_driver_side_second_row_status		DRV_SEAT_SECOND_ROW_STATUS		cabin	seat	driver_side		second	row	status	wirelesscar	TRUE		string	0		
+cabin_seat_driver_side_third_row_status		DRV_SEAT_THIRD_ROW_STATUS		cabin	seat	driver_side		third	row	status	wirelesscar	TRUE		string	0		
+cabin_seat_passenger_first_row_status		PAS_SEAT_FIRST_ROW_STATUS		cabin	seat	passenger		first	row	status	wirelesscar	TRUE		string	0		
+cabin_seat_passenger_second_row_status		PAS_SEAT_SECOND_ROW_STATUS		cabin	seat	passenger		second	row	status	wirelesscar	TRUE		string	0		
+cabin_seat_passenger_third_row_status		PAS_SEAT_THIRD_ROW_STATUS		cabin	seat	passenger		third	row	status	wirelesscar	TRUE		string	0		
+engine_blocked_status		ENGINE_BLOCK		engine	blocked					status	wirelesscar	TRUE		string	0		
+engine_coolant_level_status		ENG_COOLANT_LEVEL_WARN		engine	coolant	level				status	wirelesscar	TRUE		string	0		
+engine_ev_battery_preconditioning_status		EV_BATTERY_PRECONDITIONING_STATUS		engine	ev_battery	preconditioning				status	wirelesscar	TRUE		string	0		
+vehicle_charging_type_status		EV_CHARGING_METHOD		vehicle	charging	type				status	wirelesscar	TRUE		string	0	stringmap	{"fallback": "unknown", "values": {"WIRED": "wired", "WIRELESS": "wireless", "UNCONNECTED": "unconnected"}}
+vehicle_charging_km_per_hour_rate		EV_CHARGING_RATE_KM_PER_HOUR		vehicle	charging	km_per_hour				rate	wirelesscar	TRUE	kph	string	0		
+vehicle_charging_distance_rate		EV_CHARGING_RATE_MILES_PER_HOUR		vehicle	charging	distance				rate	wirelesscar	TRUE	mph	string	0		
+vehicle_charging_charge_rate		EV_CHARGING_RATE_SOC_PER_HOUR		vehicle	charging	charge				rate	wirelesscar	TRUE	KWh	string	0		
+vehicle_charging_status		EV_CHARGING_STATUS		vehicle	charging					status	wirelesscar	TRUE		string	0		
+vehicle_charging_last_charge_consumed_energy		EV_ENERGY_CONSUMED_LAST_CHARGE_KWH		vehicle	charging	last_charge	consumed			energy	wirelesscar	TRUE	KWh	string	0		
+engine_ev_battery_preconditioning_active		EV_IS_PRECONDITIONING		engine	ev_battery	preconditioning				active	wirelesscar	TRUE		boolean	0		
+vehicle_charging_time_to_fully_charged_duration		EV_MINUTES_TO_FULLY_CHARGED		vehicle	charging	time_to_fully_charged				duration	wirelesscar	TRUE		string	0		
+vehicle_phev_combined_range_distance		EV_PHEV_RANGE_COMBINED_KM		vehicle	phev	combined	range			distance	wirelesscar	TRUE	km	integer	0		
+engine_ev_battery_range_distance		EV_RANGE_ON_BATTERY_KM		engine	ev_battery	range				distance	wirelesscar	TRUE	km	integer	0		
+engine_ev_battery_range_prediction_status		EV_RANGE_PREDICT_STATUS		engine	ev_battery	range	prediction			status	wirelesscar	TRUE		string	0		
+engine_exhaust_reductant_next_service_distance		EXT_EXHAUST_FLUID_DISTANCE_TO_SERVICE_KM		engine	exhaust	reductant	next_service			distance	wirelesscar	TRUE	km	integer	0		
+engine_exhaust_reductant_volume		EXT_EXHAUST_FLUID_VOLUME_REFILL_LITRESX10		engine	exhaust	reductant				volume	wirelesscar	TRUE	L	integer	0		
+engine_exhaust_reductant_status		EXT_EXHAUST_FLUID_WARN		engine	exhaust	reductant				status	wirelesscar	TRUE		string	0		
+engine_exhaust_reductant_next_service_distance		EXT_KILOMETERS_TO_SERVICE		engine	exhaust	reductant	next_service			distance	wirelesscar	TRUE	km	integer	0		
+engine_exhaust_dpf_status		EXT_PARTICULATE_FILTER_WARN		engine	exhaust	dpf				status	wirelesscar	TRUE		string	0		
+vehicle_crash_status		IS_CRASH_SITUATION		vehicle	crash					status	wirelesscar	TRUE		string	0		
+vehicle_tcu_config_version_status		TU_STATUS_CONFIG_VERSION		vehicle	tcu	config	version			status	wirelesscar	TRUE		string	0		
+vehicle_tcu_gnss_time_since_fix_duration		TU_STATUS_DAYS_SINCE_GNSS_FIX		vehicle	tcu	gnss	time_since_fix			duration	wirelesscar	TRUE	days	integer	0		
+vehicle_tcu_gnss_antenna_status		TU_STATUS_GNSS_ANTENNA		vehicle	tcu	gnss	antenna			status	wirelesscar	TRUE		string	0		
+vehicle_tcu_gsm_antenna_status		TU_STATUS_GSM_EXT_ANTENNA		vehicle	tcu	gsm	antenna			status	wirelesscar	TRUE		string	0		
+vehicle_tcu_gsm_modem_status		TU_STATUS_GSM_MODEM		vehicle	tcu	gsm	modem			status	wirelesscar	TRUE		string	0		
+vehicle_tcu_handset_status		TU_STATUS_HANDSET		vehicle	tcu	handset				status	wirelesscar	TRUE		string	0		
+vehicle_tcu_hardware_version		TU_STATUS_HW_VERSION		vehicle	tcu	hardware				version	wirelesscar	TRUE		string	0		
+vehicle_tcu_imei_id		TU_STATUS_IMEI		vehicle	tcu	IMEI				id	wirelesscar	TRUE		string	0		
+vehicle_tcu_phone_connected_active		TU_STATUS_MOBILE_PHONE_CONNECTED		vehicle	tcu	phone	connected			active	wirelesscar	TRUE		boolean	0		
+vehicle_tcu_power_source_status		TU_STATUS_POWER		vehicle	tcu	power	source			status	wirelesscar	TRUE		string	0		
+vehicle_tcu_power_charge_percent		TU_STATUS_PRIMARY_CHARGE_PERCENT		vehicle	tcu	power	charge			percent	wirelesscar	TRUE		integer	0		
+vehicle_tcu_power_source_volts		TU_STATUS_PRIMARY_VOLT		vehicle	tcu	power	source			volts	wirelesscar	TRUE	volts	float	0		
+vehicle_tcu_serial_id		TU_STATUS_SERIAL_NUMBER		vehicle	tcu	serial				id	wirelesscar	TRUE		string	0		
+vehicle_tcu_software_config_version		TU_STATUS_SW_VERSION_CONFIG		vehicle	tcu	software	config			version	wirelesscar	TRUE		string	0		
+vehicle_tcu_software_main_version		TU_STATUS_SW_VERSION_MAIN		vehicle	tcu	software	main			version	wirelesscar	TRUE		string	0		
+vehicle_key_status		VEHICLE_STATE_TYPE		vehicle	key					status	wirelesscar	TRUE		string	0	stringmap	{"fallback": "unknown", "values": {"KEY-ON-ENGINE-OFF": "key_on", "KEY-OFF": "key_off", "KEY-REMOVED": "key_out"}}
+engine_status		VEHICLE_STATE_TYPE		engine						status	wirelesscar	TRUE		string	0	stringmap	{"fallback": "unknown", "values": {"KEY-ON-ENGINE-OFF": "engine_on", "ENGINE-ON-PARK": "engine_on", "ENGINE-ON-REMOTE-START": "engine_on_remote_start"}}
+body_washerfulid_low_active		WASHER_FLUID_WARN		body	washerfulid	low				active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"LOW": true}}
+vehicle_alarm_unarmed_active			ALARM_ALARM_UNARMED	vehicle	alarm	unarmed				active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+body_hood_open_active			ALARM_BONNET_OPEN	body	hood	open				active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+body_boot_open_active			ALARM_BOOT_OPEN	body	boot	open				active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+body_brake_fluid_low_active			ALARM_BRAKE_FLUID_STATUS	body	brake	fluid	low			active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+body_brake_pad_worn_active			ALARM_BRAKE_PAD_WEAR	body	brake	pad	worn			active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+engine_coolant_level_low_active			ALARM_COOLANT_LEVEL	engine	coolant	level	low			active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+vehicle_distance_to_next_service_warning_active			ALARM_DIST_TO_SERVICE_KM	vehicle	distance	to_next_service	warning			active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+body_door_open_active			ALARM_DOOR_OPEN	body	door	open				active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+engine_malfunction_active			ALARM_ENGINE_MALFUNCTION	engine	malfunction					active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+engine_on_active			ALARM_ENGINE_ON	engine	on					active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+engine_ev_battery_charging_status			ALARM_EV_BULK_CHARGE_COMPLETE	engine	ev_battery	charging				status	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": "none", "values": {"true": "bulk_charging_complete"}}
+engine_ev_battery_charging_status			ALARM_EV_CANNOT_REACH_FULL_CHARGE	engine	ev_battery	charging				status	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": "none", "values": {"true": "cannot_reach_full_charge"}}
+engine_ev_battery_charging_status			ALARM_EV_CANNOT_REACH_MAX_SOC	engine	ev_battery	charging				status	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": "none", "values": {"true": "cannot_reach_max_soc"}}
+engine_ev_battery_charging_status			ALARM_EV_CHARGE_COMPLETE	engine	ev_battery	charging				status	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": "none", "values": {"true": "charging_complete"}}
+engine_ev_battery_charging_status			ALARM_EV_CHARGE_FAULT	engine	ev_battery	charging				status	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": "none", "values": {"true": "charging_complete"}}
+engine_ev_battery_charging_status			ALARM_EV_CHARGE_INCOMPLETE	engine	ev_battery	charging				status	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": "none", "values": {"true": "charging_incomplete"}}
+engine_ev_battery_charging_status			ALARM_EV_CHARGE_INITIATED	engine	ev_battery	charging				status	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": "none", "values": {"true": "charging_initiated"}}
+engine_ev_battery_charging_status			ALARM_EV_CHARGE_INTERRUPTED	engine	ev_battery	charging				status	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": "none", "values": {"true": "charging_interrupted"}}
+engine_fuel_low_active			ALARM_FUEL_LEVEL	engine	fuel	low				active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+engine_fuel_level_active			ALARM_FUEL_LEVEL_LTRS	engine	fuel	level				active	wirelesscar	TRUE	L	integer	0		
+vehicle_tcu_antenna_gsm_failure_active			ALARM_GSM_ANTENNA_FAILURE	vehicle	tcu_antenna	gsm	failure			active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+vehicle_tcu_gsm_jammed_active			ALARM_GSM_JAMMING	vehicle	tcu	gsm	jammed			active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+engine_battery_low_active			ALARM_LOW_BATTERY	engine	battery	low				active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+engine_battery_low_active			ALARM_LOW_BATTERY_VOLT	engine	battery	low				active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+vehicle_odometer_exceeded_active			ALARM_ODOMETER_EXCEEDED	vehicle	odometer	exceeded				active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+engine_oil_low_active			ALARM_OIL_LEVEL	engine	oil	low				active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+cabin_climate_remote_active			ALARM_REMOTE_CLIMATE	cabin	climate	remote				active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+body_roof_open_active			ALARM_ROOF_OPEN	body	roof	open				active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+body_wheel_pressure_sensor_fail_active			ALARM_TYRE_PRESS_SENSOR_FAIL	body	wheel	pressure	sensor_fail			active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+body_wheel_pressure_low_front_left_active			ALARM_TYRE_PRESSURE_FL	body	wheel	pressure	low	front	left	active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+body_wheel_pressure_low_front_right_active			ALARM_TYRE_PRESSURE_FR	body	wheel	pressure	low	front	right	active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+body_wheel_pressure_low_rear_left_active			ALARM_TYRE_PRESSURE_RL	body	wheel	pressure	low	rear	left	active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+body_wheel_pressure_low_rear_right_active			ALARM_TYRE_PRESSURE_RR	body	wheel	pressure	low	rear	right	active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+vehicle_alarm_theft_active			ALARM_UNAUTH_MOVEMENT	vehicle	alarm	theft				active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+vehicle_alarm_theft_active			ALARM_VEHICLE_ALARM	vehicle	alarm	theft				active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+body_door_unlocked_active			ALARM_VEHICLE_UNLOCKED	body	door	unlocked				active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+body_washerfulid_low_active			ALARM_WASHER_FLUID_LEVEL	body	washerfulid	low				active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+body_window_open_active			ALARM_WINDOW_OPEN	body	window	open				active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+engine_exhaust_dpf_blocked_active			ALARM_PARTICULATE_FILTER	engine	exhaust	dpf	blocked			active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
+engine_exhaust_reductant_low_active			ALARM_EXHAUST_FLUID	engine	exhaust	reductant	low			active	wirelesscar	TRUE		boolean	0	stringmap	{"fallback": false, "values": {"true": true}}
